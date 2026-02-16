@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Photo Feed</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/55d43ad0bd.js" crossorigin="anonymous"></script>
+    
+</head>
+
+<body> 
+
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid d-flex justify-content-between align-items-center"> <!-- Convierte el navbar en un layout flexible y alineado -->
+
+            <div> <!-- Logo -->
+                <i class="fa-brands fa-instagram"></i>
+                <span class="navbar-brand">Instagram</span>
+            </div>
+            
+            <!-- Botones de la derecha -->
+            <div class="d-flex align-items-center gap-2"> 
+
+                <!-- Boton Create new post -->
+                    <button class="btn btn-success"
+                            type="button"
+                            data-bs-toggle="modal" 
+                            data-bs-target="#exampleModal">
+                        Create a new post
+                    </button>
+
+                    <!-- Boton Dropdown -->
+                    <div class="dropdown">
+                        <button class="btn btn-secondary btn-sm dropdown-toggle"
+                                type="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            <i class="fa-solid fa-gear"></i>
+                        </button>
+                                    
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+        </div>                
+    </nav>
+
+    <!-- Modal -->
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Create a New post</h5>
+                    <button type="button"
+                            class="btn-close"
+                            data-dismiss="modal"
+                            aria-label="Close">                    
+                    </button>
+                </div>
+                
+            <div class="modal-body">
+                <form>
+                <div class="form-group">
+                    <label for="message-text" class="col-form-label">Caption:</label>
+                    <textarea   class="form-control"
+                                placeholder= "Add the caption of your post here"
+                                id="message-text">
+                    </textarea>
+                    <div class="row p-2">
+                        <button class="col-1 border rounded p-1 m-1 btn-light">
+                            <i class="fa-solid fa-camera"></i>
+                        </button>
+                        <button class="col-1 border rounded p-1 m-1 btn-light">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </button>
+                    </div>
+                </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success">Publish</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+        
+</body>
+</html>
